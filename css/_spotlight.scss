@@ -1,0 +1,145 @@
+.spotlight-bg {
+    margin: 1vh auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2vw;
+    h2 {
+        color: $grey-font-color;
+        font-size: 4vw !important;
+        position: relative;
+    }
+    p {
+        color: $grey-font-color;
+    }
+}
+
+.avatar,
+.avatar-border {
+    clip-path: circle();
+    display: block;
+    margin: 0 auto;
+}
+
+.avatar-border {
+    background-color: white;
+    width: 136px;
+    height: 136px;
+    padding-top: 3px;
+}
+
+.player-card {
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    height: 55vh;
+    margin: 1vw;
+    animation: player-load 2s;
+    box-shadow: $box-shadow;
+}
+
+.avatar-cont {
+    background: rgb(88, 23, 141);
+    background: linear-gradient(102deg, rgba(88, 23, 141, 0.8239670868347339) 0%, rgba(157, 97, 205, 1) 100%);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 3vw;
+    height: 25vh;
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 97%);
+}
+
+.player-info {
+    padding: 1vw;
+    h3 {
+        font-size: 2vh;
+        font-weight: bold;
+    }
+    p {
+        color: $grey-font-color;
+    }
+}
+
+a.no-dec-purple {
+    color: $grey-font-color;
+    text-decoration: none;
+    transition: 0.4s;
+    &:hover {
+        color: $button-secondary;
+        transition: 0.4s;
+    }
+}
+
+.titel-cont {
+    overflow: hidden;
+    padding: 2.5%;
+}
+
+.player-facts {
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    margin: 1vw;
+    padding: 1vw;
+    animation: player-load 2s;
+    width: 97% !important;
+    box-shadow: $box-shadow;
+    .row {
+        height: 100%;
+    }
+    .col {
+        position: relative;
+    }
+}
+
+.fact-value {
+    font-weight: 900;
+    font-size: 2.5vw;
+    color: #3a3a3a;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.fact-name {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.row-60 {
+    height: 60%;
+}
+
+.row-40 {
+    height: 40%;
+}
+
+@keyframes player-load {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .spotlight-bg {
+        .col-6 {
+            width: 100% !important;
+        }
+        .col-md-8 {
+            height: 55vh !important;
+        }
+        .fact-value {
+            font-size: 1.5rem;
+        }
+    }
+    .player-facts {
+        height: 200px;
+        .col {
+            display: block !important;
+        }
+    }
+}

@@ -1,0 +1,6 @@
+# Password Protect file
+
+AuthName "Prompt"
+AuthType Basic
+AuthUserFile "../.htpasswd"
+Require valid-user

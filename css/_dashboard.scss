@@ -1,0 +1,139 @@
+.vertical-nav {
+    min-width: 17rem;
+    width: 17rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.4s;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.page-content {
+    width: calc(100% - 17rem);
+    margin-left: 17rem;
+    transition: all 0.4s;
+}
+
+.wipe-cont {
+    background-color: $bg-light-gray;
+    border-radius: 15px;
+    min-height: 20vh;
+    padding: 2vw;
+    h2 {
+        color: $grey-font-color;
+    }
+    p {
+        color: $grey-font-color;
+    }
+}
+
+.dashboard {
+    min-height: 100vh;
+    p {
+        color: $grey-font-color !important;
+    }
+    p.text-white {
+        color: white !important;
+    }
+    .card-body {
+        height: 35vh;
+        overflow: hidden;
+    }
+    h2 {
+        color: $grey-font-color;
+    }
+    .card-warning {
+        background-color: rgb(255, 118, 118) !important;
+    }
+}
+
+#backup-table {
+    max-height: 30vh;
+    overflow-y: auto;
+    margin-bottom: 3vh;
+}
+
+#dashOverview {
+    overflow: auto;
+    height: 95%;
+}
+
+#overviewCard {
+    min-height: 40vh;
+}
+
+
+/* for toggle behavior */
+
+#sidebar.active {
+    margin-left: -17rem;
+}
+
+#content.active {
+    width: 100%;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -17rem;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content {
+        width: 100%;
+        margin: 0;
+    }
+    #content.active {
+        margin-left: 17rem;
+        width: calc(100% - 17rem);
+    }
+}
+
+
+/*
+body {
+    background: #aa59d9;
+    background: -webkit-linear-gradient(to right, #8a59d9, #acabf7);
+    background: linear-gradient(to right, #850ce7, #a3a2fa);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+*/
+
+.text-uppercase {
+    letter-spacing: 0.1em;
+}
+
+.text-gray {
+    color: #aaa;
+}
+
+i {
+    color: $button-primary;
+}
+
+#loggs {
+    max-height: 80%;
+    overflow: auto;
+}
+
+#logging-card {
+    height: 50vh;
+}
+
+.logging {
+    font-family: Consolas !important;
+}
+
+#feedback-table {
+    overflow-y: auto;
+    height: 75%;
+}
+
+#db-status-table {
+    overflow: scroll;
+    height: 21vh;
+}

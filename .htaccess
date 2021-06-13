@@ -1,0 +1,10 @@
+#Rederict to index
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ index.php [PT,L]
+
+#Rederict when no privilege
+ErrorDocument 403 https://http.cat/403
+ErrorDocument 500 https://http.cat/500
+ErrorDocument 503 https://http.cat/503

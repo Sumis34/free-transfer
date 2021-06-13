@@ -1,0 +1,69 @@
+.podium {
+    background-color: $podium-div-bg;
+    border-radius: 10px;
+    min-height: 30vw;
+    padding: 3vw 0;
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: $podium-header-fg !important;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 4vw !important;
+    }
+
+    .col {
+        padding: 0;
+    }
+    .podium-player-name {
+        font-size: 1.5vw !important;
+        position: relative;
+        font-weight: bold;
+        top: -5.25vh;
+    }
+    .podium-text {
+        position: relative;
+        top: -50px;
+        z-index: 1;
+    }
+    .podium-stats {
+        color: $podium-block-text-fg;
+    }
+    .medal {
+        color: $podium-block-medal;
+        right: -8.4vw;
+        top: -70px;
+        position: relative;
+        font-size: 10vw;
+    }
+    @mixin podium-block($bg-col, $height, $bottom) {
+        border-radius: 10px;
+        position: relative;
+        margin: 0 auto;
+        width: 15vw;
+        padding: 2vw;
+        background-color: $bg-col;
+        height: $height;
+        bottom: $bottom;
+    }
+    .first {
+        @include podium-block($podium-block-first, 25vw, -10vw);
+    }
+    .second {
+        @include podium-block($podium-block-second, 17vw, -18vw);
+    }
+    .third {
+        @include podium-block($podium-block-third, 10vw, -25vw);
+    }
+}
+
+@media (max-width:767px) {
+    .podium {
+        .col {
+            display: block !important;
+        }
+    }
+}

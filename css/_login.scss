@@ -1,0 +1,36 @@
+.login {
+    min-height: 70vh;
+}
+
+.login-heading {
+    font-weight: 700;
+    margin: 10px;
+}
+
+.form-label-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.form-label-group>input,
+.form-label-group>label {
+    padding: 20px 20px;
+    height: auto;
+    border-radius: 1rem;
+    background-color: rgb(243, 243, 243);
+    border-style: none;
+}
+
+.login-frame {
+    background-color: white;
+    border-radius: 15px;
+    width: 30vw;
+    padding: 2vw;
+    margin-top: 30vh;
+}
+
+.login-frame .signIn {
+    padding: 10px 20px;
+    color: rgb(51, 51, 51);
+    font-weight: 700;
+}
