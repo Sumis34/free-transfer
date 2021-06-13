@@ -26,61 +26,12 @@ function build($page)
         <script src="js/header.js"></script>
         <script src="https://kit.fontawesome.com/c38bf06c9c.js" crossorigin="anonymous"></script>
         <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WPDQNG7SWZ"></script>
         <script src="/js/google.js"></script>
-        <title>GS | Player Stats</title>
+        <title>Free Transfer</title>
     </head>
 
     <body data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="55" tabindex="0">
-        <?php
-        switch ($page) {
-            case "playerPage.php":
-                require_once 'navigationPlayer.php';
-                break;
-            case "compare.php":
-                require_once 'navigationCompare.php';
-                break;
-            case "compareShow.php":
-                require_once 'navigationCompare.php';
-                break;
-            case "dashboard.php":
-                require_once 'navigationDashboard.php';
-                break;
-            case "controls.php":
-                require_once 'navigationDashboard.php';
-                break;
-            case "playerSearch.php":
-                require_once 'navigationPlayerSearch.php';
-                break;
-            case "home.php":
-                require_once 'navigation.php';
-                break;
-        }
-        ?>
         <header>
-            <?php
-            switch ($page) {
-                case "playerPage.php":
-                    require_once 'headerPlayer.php';
-                    break;
-                case "compare.php":
-                    require_once 'headerCompare.php';
-                    break;
-                case "compareShow.php":
-                    require_once 'headerCompare.php';
-                    break;
-                case "playerSearch.php":
-                    require_once 'headerSearch.php';
-                    break;
-                case "home.php":
-                    require_once 'header.php';
-                    break;
-                default:
-                    //Pass
-                    break;
-            }
-            ?>
         </header>
         <main>
             <?php
@@ -130,8 +81,6 @@ function build($page)
         <footer class="site-footer">
             <?php require_once 'footer.php'; ?>
         </footer>
-        <script src="//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
-        <script src="./resources/searchDevice.js"></script>
     </body>
 
     </html>

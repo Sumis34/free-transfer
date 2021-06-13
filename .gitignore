@@ -1,0 +1,13 @@
+.vscode
+index.php
+secret.json
+*.pyc
+style.css
+style.css.map
+datenbank_connector/__pycache__/json_helper.cpython-39.pyc
+datenbank_connector/playerData_old.json
+datenbank_connector/playerData.json
+datenbank_connector/steamid_crawler.py
+datenbank_connector/data
+datenbank_connector/get_all_reasons.py
+*.log
