@@ -35,7 +35,7 @@ $(document).ready(function() {
                     $('#uploadStatus').html('<p style="color:#EA4335;">Please select a valid file to upload.</p>');
                 } else {
                     $('#uploadForm')[0].reset();
-                    $('#uploadStatus').html('<p style="color:#EA4335;">' + resp + '</p>');
+                    $('#uploadStatus').html('<p style="color:#28A74B;">File has uploaded successfully!</p>');
                 }
             }
         });
