@@ -1,16 +1,18 @@
 <?php
-$name = bin2hex(random_bytes(4)) . "_" . time();
-echo $name;
-
 
 $upload = 'err'; 
 if(!empty($_FILES['file'])){ 
      
     // File upload configuration 
     $targetDir = "./uploads/"; 
-    $allowTypes = array('pdf', 'doc', 'docx', 'jpg', 'png', 'jpeg', 'gif', 'wav'); 
-     
-    $fileName = basename($_FILES['file']['name']); 
+    $allowTypes = array('pdf', 'doc', 'docx', 'jpg', 'png', 'jpeg', 'gif', 'wav');
+
+    //Generate random name
+    $rndName = bin2hex(random_bytes(4)) . "_" . time();
+
+    $fileName = basename($_FILES['file']['name']);
+
+    //Insert file into db
     $targetFilePath = $targetDir.$fileName; 
      
     // Check whether file type is valid 

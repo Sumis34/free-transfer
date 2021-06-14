@@ -6,7 +6,7 @@ function startDB()
         "localhost",
         $GLOBALS['DB_USERNAME'],
         $GLOBALS['DB_PASSWORD'],
-        "db_stats"
+        "transfer"
     );
     if ($db->connect_error) {
         die("Connection failed: " . $db->connect_error);

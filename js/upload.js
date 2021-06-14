@@ -34,6 +34,7 @@ $(document).ready(function() {
                 } else if (resp == 'err') {
                     $('#uploadStatus').html('<p style="color:#EA4335;">Please select a valid file to upload.</p>');
                 } else {
+                    $('#uploadForm')[0].reset();
                     $('#uploadStatus').html('<p style="color:#EA4335;">' + resp + '</p>');
                 }
             }
