@@ -8,7 +8,7 @@ $(document).ready(function() {
                 xhr.upload.addEventListener("progress", function(evt) {
                     if (evt.lengthComputable) {
                         var percentComplete = ((evt.loaded / evt.total) * 100);
-                        $(".progress-bar").width(percentComplete + '%');
+                        $(".progress-bar").width(Math.round(percentComplete) + '%');
                         $(".progress-bar").html(percentComplete + '%');
                     }
                 }, false);
@@ -39,6 +39,7 @@ $(document).ready(function() {
                 }
             }
         });
+
     });
 
     /* File type validation
