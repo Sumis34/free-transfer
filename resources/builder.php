@@ -23,7 +23,7 @@ function build($page)
         <title>Free Transfer</title>
     </head>
 
-    <body data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="55" tabindex="0">
+    <body tabindex="0">
         <header>
         </header>
         <main>

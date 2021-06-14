@@ -5,13 +5,12 @@ include_once 'resources/builder.php';
 //Session starten
 session_start();
 
-
 // Loads the secret file 
 $json   = file_get_contents("./datenbank_connector/secret.json");
 $secret = json_decode($json, true);
 
-$DB_USERNAME         = $secret['db_username'];
-$DB_PASSWORD         = $secret['db_password'];
+$DB_USERNAME = $secret['db_username'];
+$DB_PASSWORD = $secret['db_password'];
 
 // URL Array index, fÃ¼r live Server 1
 $urlIndex = 2;

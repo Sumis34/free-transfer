@@ -1,3 +1,4 @@
+<?php require_once './js/upload.php';?>
 <div id="main-bg">
     <div class="upload">
         <!-- File upload form -->

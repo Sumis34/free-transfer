@@ -1,5 +1,6 @@
 <?php
 require_once './sql/startDB.php';
+
 require_once './action/getClientIP.php';
 
 $upload = 'err'; 
