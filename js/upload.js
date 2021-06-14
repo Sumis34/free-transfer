@@ -15,14 +15,14 @@ $(document).ready(function() {
                 return xhr;
             },
             type: 'POST',
-            url: 'upload.php',
+            url: 'upload',
             data: new FormData(this),
             contentType: false,
             cache: false,
             processData: false,
             beforeSend: function() {
                 $(".progress-bar").width('0%');
-                $('#uploadStatus').html('<img src="images/loading.gif"/>');
+                $('#uploadStatus').html('<p style="color:#000;">File uploading.</p>');
             },
             error: function() {
                 $('#uploadStatus').html('<p style="color:#EA4335;">File upload failed, please try again.</p>');
@@ -33,6 +33,8 @@ $(document).ready(function() {
                     $('#uploadStatus').html('<p style="color:#28A74B;">File has uploaded successfully!</p>');
                 } else if (resp == 'err') {
                     $('#uploadStatus').html('<p style="color:#EA4335;">Please select a valid file to upload.</p>');
+                } else {
+                    $('#uploadStatus').html('<p style="color:#EA4335;">' + resp + '</p>');
                 }
             }
         });

@@ -7,7 +7,7 @@ $upload = 'err';
 if(!empty($_FILES['file'])){ 
      
     // File upload configuration 
-    $targetDir = "../uploads/"; 
+    $targetDir = "./uploads/"; 
     $allowTypes = array('pdf', 'doc', 'docx', 'jpg', 'png', 'jpeg', 'gif', 'wav'); 
      
     $fileName = basename($_FILES['file']['name']); 
