@@ -35,16 +35,16 @@ $(document).ready(function() {
                     $('#uploadStatus').html('<p style="color:#EA4335;">Please select a valid file to upload.</p>');
                 } else {
                     $('#uploadForm')[0].reset();
-                    $('#uploadStatus').html('<p style="color:#28A74B;">File has uploaded successfully!</p>');
+                    $("#uploadStatus").load("/transfer/action/downloadLink.php", function() {});
+                    //$('#uploadStatus').html('<p style="color:#28A74B;" class"success">File has uploaded successfully!</p> <input type="text" name="link" value="im a link">');
                 }
             }
         });
-
     });
 
-    /* File type validation
+    // File type validation
     $("#fileInput").change(function() {
-        var allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.ms-office', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg', 'image/png', 'image/jpg', 'image/gif'];
+        var allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.ms-office', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg', 'image/png', 'image/jpg', 'image/gif', 'video/mp4'];
         var file = this.files[0];
         var fileType = file.type;
         if (!allowedTypes.includes(fileType)) {
@@ -53,5 +53,9 @@ $(document).ready(function() {
             return false;
         }
     });
-    */
+
+    $('.success').ready(function() {
+        console.log('Hallo');
+    });
+
 });

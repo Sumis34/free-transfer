@@ -7,10 +7,12 @@ if(!empty($_FILES['file'])){
 
     // File upload configuration 
     $targetDir = "./uploads/"; 
-    $allowTypes = array('pdf', 'doc', 'docx', 'jpg', 'png', 'jpeg', 'gif', 'wav');
+    $allowTypes = array('pdf', 'doc', 'docx', 'jpg', 'png', 'jpeg', 'gif', 'wav', 'mp4');
 
     //file identifier
     $fileCode = bin2hex(random_bytes(16));
+
+    $_SESSION['fileCode'] = $fileCode;
 
     //Generate random name
     $fileName = $fileCode . "_" . time();

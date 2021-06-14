@@ -1,21 +1,17 @@
 <?php
 
-echo $_SESSION['fileToGet'];
+require_once './sql/executeSQL.php';
+
+$fileCode = $_SESSION['fileToGet'];
+
+$result = executeSQL('getFileData', $fileCode, true);
+
+
 ?>
+
 <div id="main-bg">
     <div class="upload">
-        <!-- File upload form -->
-        <form id="uploadForm" enctype="multipart/form-data">
-            <label>Choose File:</label>
-            <input type="file" name="file" id="fileInput">
-            <input type="submit" name="submit" value="UPLOAD" />
-        </form>
-        <!-- Progress bar -->
-        <div class="progress">
-            <div class="progress-bar"></div>
-        </div>
-        <!-- Display upload status -->
-        <div id="uploadStatus"></div>
+        <a href="<?php echo "." .$result['file_path'];?>" download="<?php echo $result['file_name'];?>"><?php echo $result['file_name'];?></a>
     </div>
 </div>
 
