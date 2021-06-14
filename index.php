@@ -29,10 +29,12 @@ if (!empty($_SESSION['getID'][1])) {
 $url = explode('/', $temp);
 $url = array_slice($url, 1);
 
+$_SESSION['testUrl'] = $url;
+
 // base address is requested
 if (count($url) == $urlIndex && $url[$urlIndex - 1] == "") {
     build('home.php');
-} else if (count($url) == $urlIndex) {
+} else if (count($url) >= $urlIndex) {
     // subadress is requested
     $subDomain = strtolower($url[$urlIndex - 1]);
 
@@ -40,12 +42,20 @@ if (count($url) == $urlIndex && $url[$urlIndex - 1] == "") {
         case 'home':
             build('home.php');
             break;
- 
+
+        case 'file':
+            //If a file hash is given forward to the download page
+            if(isset($url[$urlIndex])){
+                $_SESSION['fileToGet'] = $url[$urlIndex];
+                build('download.php');
+            }else
+                build('404.php');
+            break;
+
         default:
             build('404.php');
             break;
     }
-
 } else {
     build('404.php');
 }
