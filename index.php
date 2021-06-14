@@ -43,13 +43,19 @@ if (count($url) == $urlIndex && $url[$urlIndex - 1] == "") {
             build('home.php');
             break;
 
+        case 'upload':
+            build('upload.php');
+            break;
+
         case 'file':
             //If a file hash is given forward to the download page
-            if(isset($url[$urlIndex])){
+            if (isset($url[$urlIndex]) && $url[$urlIndex] != "") {
                 $_SESSION['fileToGet'] = $url[$urlIndex];
                 build('download.php');
-            }else
+            } else {
+                $_SESSION['fileToGet'] = "";
                 build('404.php');
+            }
             break;
 
         default:
