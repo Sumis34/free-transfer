@@ -10,4 +10,5 @@ datenbank_connector/playerData.json
 datenbank_connector/steamid_crawler.py
 datenbank_connector/data
 datenbank_connector/get_all_reasons.py
+uploads/
 *.log
