@@ -1,4 +1,4 @@
-<?php require_once './js/upload.php';?>
+<?php require_once './js/upload_js.php';?>
 <div id="main-bg">
     <div class="upload">
         <!-- File upload form -->

@@ -19,8 +19,8 @@ $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https"
                     xhr.upload.addEventListener("progress", function(evt) {
                         if (evt.lengthComputable) {
                             var percentComplete = ((evt.loaded / evt.total) * 100);
-                            $(".progress-bar").width(Math.round(percentComplete) + '%');
-                            $(".progress-bar").html(percentComplete + '%');
+                            $(".progress-bar").width(percentComplete + '%');
+                            $(".progress-bar").html(Math.round(percentComplete) + '%');
                         }
                     }, false);
                     return xhr;
@@ -58,15 +58,10 @@ $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https"
             var file = this.files[0];
             var fileType = file.type;
             if (!allowedTypes.includes(fileType)) {
-                alert('Please select a valid file (PDF/DOC/DOCX/JPEG/JPG/PNG/GIF).');
+                alert('Please select a valid file (PDF/DOC/DOCX/JPEG/JPG/PNG/GIF/MP4).');
                 $("#fileInput").val('');
                 return false;
             }
         });
-
-        $('.success').ready(function() {
-            console.log('Hallo');
-        });
-
     });
 </script>
