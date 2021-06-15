@@ -40,7 +40,7 @@ $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https"
                     if(status == 'abort'){
                         $('#uploadStatus').html('<p style="color:#EA4335;">Upload stopped</p>');
                         $(".progress-bar").width('0%');
-                        $('#uploadForm')[0].reset();
+                        //$('#uploadForm')[0].reset();
                     }                        
                     else
                         $('#uploadStatus').html('<p style="color:#EA4335;">File upload failed, please try again.</p>');
@@ -60,8 +60,9 @@ $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https"
         });
 
         //stop upload
-        $(document).on('click', '#uploadStatus', function(e) {
+        $(document).on('click', '#abort', function(e) {
             ajaxCall.abort();
+            location.reload();
             console.log("Canceled");
         });
 
