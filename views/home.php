@@ -1,11 +1,11 @@
 <?php require_once './js/upload_js.php';?>
+<script src="./js/upload_style.js"></script>
 <div id="main-bg">
     <div class="upload">
         <!-- File upload form -->
         <form id="uploadForm" enctype="multipart/form-data">
             <label>Choose File:</label>
             <input type="file" name="file" id="fileInput">
-            <input type="submit" name="submit" value="UPLOAD" />
         </form>
         <!-- Progress bar -->
         <div class="progress">
