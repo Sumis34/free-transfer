@@ -7,6 +7,7 @@ $fileCode = $_SESSION['fileCode'];
 //This link is the download link the user gets
 
 $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]/transfer/file/$fileCode";
+$share_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]/transfer/share";
 ?>
 <script>
     var ajaxCall;
@@ -37,13 +38,7 @@ $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https"
                     $('#uploadStatus').html('<p style="color:#000;">File uploading.</p>');
                 },
                 error: function(xhr, status, error) {
-                    if(status == 'abort'){
-                        $('#uploadStatus').html('<p style="color:#EA4335;">Upload stopped</p>');
-                        $(".progress-bar").width('0%');
-                        //$('#uploadForm')[0].reset();
-                    }                        
-                    else
-                        $('#uploadStatus').html('<p style="color:#EA4335;">File upload failed, please try again.</p>');
+                    $('#uploadStatus').html('<p style="color:#EA4335;">File upload failed, please try again.</p>');
                 },
                 success: function(resp) {
                     if (resp == 'ok') {
@@ -52,8 +47,7 @@ $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https"
                     } else if (resp == 'err') {
                         $('#uploadStatus').html('<p style="color:#EA4335;">Please select a valid file to upload.</p>');
                     } else {
-                        $('#uploadForm')[0].reset();
-                        $('#uploadStatus').html('<p style="color:#28A74B;" class"success">File has uploaded successfully!</p> <input type="text" name="link" value="<?php echo $actual_link ?>">');
+                        window.location.replace('<?php echo $share_link?>');
                     }
                 }
             });

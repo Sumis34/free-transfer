@@ -34,6 +34,10 @@ function build($page)
                     require_once './action/' . $page;
                     break;
 
+                case "sendFile.php":
+                    require_once './views/upload/' . $page;
+                    break;
+
                 default:
                     require_once './views/' . $page;
                     break;

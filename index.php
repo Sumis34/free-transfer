@@ -46,6 +46,10 @@ if (count($url) == $urlIndex && $url[$urlIndex - 1] == "") {
             build('upload.php');
             break;
 
+        case 'share':
+            build('sendFile.php');
+            break;
+
         case 'file':
             //If a file hash is given forward to the download page
             if (isset($url[$urlIndex]) && $url[$urlIndex] != "") {
