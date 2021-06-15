@@ -38,6 +38,10 @@ function build($page)
                     require_once './views/upload/' . $page;
                     break;
 
+                case "updateFileMSG.php":
+                    require_once './action/' . $page;
+                    break;
+
                 default:
                     require_once './views/' . $page;
                     break;

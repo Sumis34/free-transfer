@@ -46,6 +46,10 @@ if (count($url) == $urlIndex && $url[$urlIndex - 1] == "") {
             build('upload.php');
             break;
 
+        case 'updatefilemsg':
+            build('updateFileMSG.php');
+            break;
+
         case 'share':
             build('sendFile.php');
             break;
