@@ -9,4 +9,6 @@ $(document).ready(function() {
         //Show progresss bar when file uploading
         $('#upload').load('./views/upload/loadFile.php');
     });
+
+
 });
