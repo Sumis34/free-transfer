@@ -15,6 +15,15 @@
     margin: 30vh auto;
     border-radius: 20px;
     padding: 100px 20px;
+    a:hover p.file-name {
+        color: $soft-green;
+        transition: .2s;
+    }
+}
+
+.wide-box {
+    width: 420px !important;
+    padding: 100px 40px;
 }
 
 .share {
@@ -61,4 +70,42 @@
 .hint {
     font-weight: 600;
     text-align: center;
+}
+
+.hint-sm {
+    font-weight: normal;
+    text-align: center;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.file-name {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    color: $grey-font-color;
+    transition: .2s;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+p.file-name {
+    margin: 0;
+    padding: 0;
+}
+
+p.file-size {
+    color: rgb(68, 68, 68);
+    font-size: 10px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.message-bg {
+    background-color: rgb(241, 241, 241);
+    border-radius: 10px;
+    min-height: 50px;
+    padding: 20px 10px;
+    font-size: 15px;
 }
