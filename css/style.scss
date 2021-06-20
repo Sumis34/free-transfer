@@ -5,6 +5,34 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+
+/* width */
+
+*::-webkit-scrollbar {
+    width: 3px;
+}
+
+
+/* Track */
+
+*::-webkit-scrollbar-track {
+    border-radius: 2px;
+}
+
+
+/* Handle */
+
+*::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+/* Handle on hover */
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 body {
     background: rgb(4, 38, 255);
     background: linear-gradient(139deg, rgba(95, 166, 245, 1) 0%, rgba(4, 38, 255, 1) 100%);

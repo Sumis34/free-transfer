@@ -106,6 +106,39 @@ p.file-size {
     background-color: rgb(241, 241, 241);
     border-radius: 10px;
     min-height: 50px;
+    max-height: 160px;
+    overflow-y: scroll !important;
+    //overflow-y: hidden;
     padding: 20px 10px;
     font-size: 15px;
+}
+
+.btn-gradient {
+    border-radius: 12px !important;
+    transition: 0.3s;
+    background: linear-gradient(102deg, rgba(94, 26, 150, 1) 0%, rgba(157, 97, 205, 1) 100%);
+}
+
+.arrow-right,
+.arrow-left {
+    color: white;
+    opacity: 0;
+    transition: 0.3s;
+    margin: 10px 0px 10px 10px;
+}
+
+#home-button:hover .arrow-left {
+    opacity: 1;
+    margin: 10px 5px 10px 20px;
+}
+
+#home-button {
+    -webkit-box-shadow: 0px 0px 28px 0px #ebabff;
+    box-shadow: 0px 0px 28px 0px #68f08a;
+    border-radius: 20px;
+    border: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    padding-left: 20px;
+    background: linear-gradient( 102deg, #14a14f 0%, $soft-green 100%);
 }

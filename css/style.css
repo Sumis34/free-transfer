@@ -109,12 +109,66 @@ p.file-size {
   background-color: #f1f1f1;
   border-radius: 10px;
   min-height: 50px;
+  max-height: 160px;
+  overflow-y: scroll !important;
   padding: 20px 10px;
   font-size: 15px;
 }
 
+.btn-gradient {
+  border-radius: 12px !important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: linear-gradient(102deg, #5e1a96 0%, #9d61cd 100%);
+}
+
+.arrow-right,
+.arrow-left {
+  color: white;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin: 10px 0px 10px 10px;
+}
+
+#home-button:hover .arrow-left {
+  opacity: 1;
+  margin: 10px 5px 10px 20px;
+}
+
+#home-button {
+  -webkit-box-shadow: 0px 0px 28px 0px #ebabff;
+  box-shadow: 0px 0px 28px 0px #68f08a;
+  border-radius: 20px;
+  border: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding-left: 20px;
+  background: linear-gradient(102deg, #14a14f 0%, #3cb572 100%);
+}
+
 * {
   font-family: 'Montserrat', sans-serif;
+}
+
+/* width */
+*::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  border-radius: 2px;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 body {
