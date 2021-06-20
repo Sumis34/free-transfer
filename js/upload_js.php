@@ -69,7 +69,7 @@ $share_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" 
                 alert('Please select a valid file (PDF/DOC/DOCX/JPEG/JPG/PNG/GIF/MP4).');
                 $("#fileInput").val('');
                 return false;
-            }
+            } 
         });
     });
 </script>
