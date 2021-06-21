@@ -15,9 +15,9 @@ $fileSuffix = end($fileSuffix);
 
 $fileSize = formatSizeUnits(filesize($result['file_path']));
 
-$fileIcon = "./images/icons/svg/" . $fileSuffix .".svg";
+$fileIcon = "./images/icons/svg/" . $fileSuffix . ".svg";
 
-if (!file_exists($fileIcon)){
+if (!file_exists($fileIcon)) {
     $fileIcon = "../images/icons/file.svg";
 } else
     $fileIcon = ".$fileIcon";
@@ -32,7 +32,7 @@ else
     <div class="upload wide-box">
         <a href="<?php echo "." . $result['file_path']; ?>" download="<?php echo $result['file_name']; ?>" class="file-name">
             <div class="row">
-                <div class="col-3">
+                <div class="col-3" style="min-width: 58px;">
                     <img src="<?php echo $fileIcon ?>" alt="" width="25px" height="25px">
                     <p class="file-size"><?php echo $fileSize; ?></p>
                 </div>
@@ -45,6 +45,6 @@ else
             <p><?php echo $message; ?></p>
         </div>
         <p class="hint-sm">Click file name to download.</p>
-        <a href="/transfer" class="btn btn-primary mt-4 btn-sm" id="home-button">Share files?<i class="fas fa-arrow-circle-left mr-1 ml-1 arrow-left" aria-hidden="true"></i></a>
+        <a href="/transfer" class="btn btn-primary mt-4 btn-sm mt-2" id="home-button">Share files?<i class="fas fa-arrow-circle-left mr-1 ml-1 arrow-left" aria-hidden="true"></i></a>
     </div>
 </div>
