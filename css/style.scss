@@ -39,3 +39,21 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 }
+
+.btn-outline-green {
+    border-color: $soft-green !important;
+    background-color: #fff;
+    color: $soft-green !important;
+    &:hover {
+        background-color: $soft-green;
+        color: #fff;
+    }
+}
+
+textarea {
+    border: 1px solid $light-gray;
+    border-radius: 5px;
+    resize: none !important;
+    width: 100%;
+    height: 100px;
+}
