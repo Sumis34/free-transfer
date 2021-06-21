@@ -177,8 +177,10 @@ p.file-size {
 
 .social-links {
   position: fixed;
-  top: 70vh;
-  left: 46%;
+  top: 71vh;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
   color: #fff;
   font-size: 25px;
 }
