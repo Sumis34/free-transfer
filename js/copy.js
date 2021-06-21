@@ -13,7 +13,7 @@ function copyLink() {
     alert("Copied the text: " + copyText.value);
 }
 $(document).ready(function() {
-    document.getElementById("toastbtn").onclick = function() {
+    document.getElementById("button-addon2").onclick = function() {
         var toastElList = [].slice.call(document.querySelectorAll('.toast'))
         var toastList = toastElList.map(function(toastEl) {
             // Creates an array of toasts (it only initializes them)
