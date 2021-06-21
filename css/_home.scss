@@ -169,3 +169,19 @@ p.file-size {
     color: #fff;
     font-weight: 500;
 }
+
+.social-links {
+    position: fixed;
+    top: 70vh;
+    left: 46%;
+    color: #fff;
+    font-size: 25px;
+    a {
+        color: #fff;
+        transition: .3s;
+    }
+    a:hover {
+        color: $soft-green;
+        transition: .3s;
+    }
+}

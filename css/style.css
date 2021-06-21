@@ -175,6 +175,26 @@ p.file-size {
   font-weight: 500;
 }
 
+.social-links {
+  position: fixed;
+  top: 70vh;
+  left: 46%;
+  color: #fff;
+  font-size: 25px;
+}
+
+.social-links a {
+  color: #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.social-links a:hover {
+  color: #3cb572;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
 .cloud-bg {
   position: fixed;
   background-image: url(../images/404-bg.jpg);
