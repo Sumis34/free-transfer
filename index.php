@@ -15,7 +15,6 @@ $DB_PASSWORD = $secret['db_password'];
 // URL Array index, fÃ¼r live Server 1
 $urlIndex = 2;
 
-
 $tempGet = trim($_SERVER['REQUEST_URI'], '?');
 $_SESSION['getID'] = explode('?', $tempGet);
 

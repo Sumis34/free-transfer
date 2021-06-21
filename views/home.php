@@ -10,6 +10,6 @@
             <input type="file" name="file" id="fileInput" hidden>
         </form>
         <p class="hint">Click, to upload files</p>
-        <p class="sub-hint"></p>
+        
     </div>
 </div>

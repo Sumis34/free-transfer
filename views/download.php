@@ -9,9 +9,10 @@ $result = executeSQL('getFileData', $fileCode, true);
 
 $fileSuffix = explode(".", $result['file_name']);
 
-$fileSuffix = end($fileSuffix);
+if (!file_exists($result['file_path']))
+    header('Location: /transfer/404');
 
-//$fileSuffix = "sdf";
+$fileSuffix = end($fileSuffix);
 
 $fileSize = formatSizeUnits(filesize($result['file_path']));
 
