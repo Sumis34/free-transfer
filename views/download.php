@@ -45,6 +45,6 @@ else
             <p><?php echo $message; ?></p>
         </div>
         <p class="hint-sm">Click file name to download.</p>
-        <a href="transfer/home" class="btn btn-primary mt-4 btn-sm" id="home-button">Upload<i class="fas fa-arrow-circle-left mr-1 ml-1 arrow-left" aria-hidden="true"></i></a>
+        <a href="/transfer" class="btn btn-primary mt-4 btn-sm" id="home-button">Share files?<i class="fas fa-arrow-circle-left mr-1 ml-1 arrow-left" aria-hidden="true"></i></a>
     </div>
 </div>

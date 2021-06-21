@@ -28,11 +28,11 @@
 
 .share {
     background-color: #fff;
-    width: 600px;
+    width: 320px;
     height: 420px;
     margin: 30vh auto;
     border-radius: 20px;
-    padding: 100px 20px;
+    padding: 30px 40px;
 }
 
 #getFile {
@@ -114,9 +114,9 @@ p.file-size {
 }
 
 .btn-gradient {
-    border-radius: 12px !important;
+    border-radius: 6px !important;
     transition: 0.3s;
-    background: linear-gradient(102deg, rgba(94, 26, 150, 1) 0%, rgba(157, 97, 205, 1) 100%);
+    background: linear-gradient( 102deg, #14a14f 0%, $soft-green 100%);
 }
 
 .arrow-right,
@@ -141,4 +141,31 @@ p.file-size {
     transition: 0.3s;
     padding-left: 20px;
     background: linear-gradient( 102deg, #14a14f 0%, $soft-green 100%);
+}
+
+.success {
+    color: $grey-font-color;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.clipboard-icon {
+    &>svg {
+        fill: $soft-green;
+        width: 30px;
+        height: 30px;
+        transition: 0.3s;
+    }
+    #button-addon2:hover &>svg {
+        fill: #fff;
+        transition: 0.3s;
+    }
+}
+
+#new-upload {
+    width: 100%;
+    color: #fff;
+    font-weight: 500;
 }

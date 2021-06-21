@@ -30,11 +30,11 @@
 
 .share {
   background-color: #fff;
-  width: 600px;
+  width: 320px;
   height: 420px;
   margin: 30vh auto;
   border-radius: 20px;
-  padding: 100px 20px;
+  padding: 30px 40px;
 }
 
 #getFile {
@@ -116,10 +116,10 @@ p.file-size {
 }
 
 .btn-gradient {
-  border-radius: 12px !important;
+  border-radius: 6px !important;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background: linear-gradient(102deg, #5e1a96 0%, #9d61cd 100%);
+  background: linear-gradient(102deg, #14a14f 0%, #3cb572 100%);
 }
 
 .arrow-right,
@@ -145,6 +145,34 @@ p.file-size {
   transition: 0.3s;
   padding-left: 20px;
   background: linear-gradient(102deg, #14a14f 0%, #3cb572 100%);
+}
+
+.success {
+  color: #272727;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.clipboard-icon > svg {
+  fill: #3cb572;
+  width: 30px;
+  height: 30px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#button-addon2:hover .clipboard-icon > svg {
+  fill: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#new-upload {
+  width: 100%;
+  color: #fff;
+  font-weight: 500;
 }
 
 * {
@@ -176,5 +204,24 @@ body {
   background: linear-gradient(139deg, #5fa6f5 0%, #0426ff 100%);
   min-height: 100vh;
   overflow-x: hidden;
+}
+
+.btn-outline-green {
+  border-color: #3cb572 !important;
+  background-color: #fff;
+  color: #3cb572 !important;
+}
+
+.btn-outline-green:hover {
+  background-color: #3cb572;
+  color: #fff;
+}
+
+textarea {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  resize: none !important;
+  width: 100%;
+  height: 100px;
 }
 /*# sourceMappingURL=style.css.map */
