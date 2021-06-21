@@ -48,4 +48,5 @@ else
         <p class="hint-sm">Click file name to download.</p>
         <a href="/transfer" class="btn btn-primary mt-4 btn-sm mt-2" id="home-button">Share files?<i class="fas fa-arrow-circle-left mr-1 ml-1 arrow-left" aria-hidden="true"></i></a>
     </div>
+    <?php require_once 'socialmediaLinks.php'; ?>
 </div>
