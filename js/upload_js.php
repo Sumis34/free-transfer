@@ -38,7 +38,7 @@ $share_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" 
                     $('#uploadStatus').html('<p style="color:#000;">File uploading.</p>');
                 },
                 error: function(xhr, status, error) {
-                    $('#uploadStatus').html('<p style="color:#EA4335;">File upload failed, please try again.</p>');
+                    $('#uploadStatus').html('<p style="color:#EA4335;">File upload failed, please try again.' + error + '</p>');
                 },
                 success: function(resp) {
                     if (resp == 'ok') {
