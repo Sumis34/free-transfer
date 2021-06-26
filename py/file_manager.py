@@ -1,5 +1,22 @@
 import os 
-import time 
-file = os.stat('c:/xampp/htdocs/transfer/uploads/0f17c88d07269bf427d91c93794db07c_1624305919.jpg')
-result = (time.time() - file.st_mtime) 
-print(result)
+import time
+import db
+
+def delete_expired_files(path = 'uploads/'):
+
+    files = os.listdir(path)
+
+    for file in files:
+        file_age = round((time.time() - os.stat(path + file).st_mtime) /60 /60 /24)
+        if file_age >= 0:
+            try:
+                os.remove(path + file)
+                db.delete_file(file)
+                print(file + " Removed")
+            except:
+                print("Error while deleting file: " + file)
+        else:
+            print("File not expired!")
+
+if __name__ == "__main__":
+    delete_expired_files()
