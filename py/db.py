@@ -13,7 +13,8 @@ def db_start():
     )
 
     if db.is_connected():
-            print('Connected to MySQL database')
+        #print('Connected to MySQL database')
+        pass
 
     return db
 
@@ -40,19 +41,24 @@ def delete_file(file_name):
         print(e)
         return e
 
-def get_file(file_name):
+def get_file(file_name = None):
+
     try:
         db = db_start()
 
-        file_path = "./uploads/" + file_name
-
         cursor = db.cursor()
 
-        sql = "SELECT * FROM files WHERE file_path = %s"
+        #If no path is provided select all files
 
-        val = (file_path, )
+        if file_name is None:
+            sql = "SELECT * FROM files"
+            cursor.execute(sql)
 
-        cursor.execute(sql, val)
+        else:
+            file_path = "./uploads/" + file_name
+            sql = "SELECT * FROM files WHERE file_path = %s"
+            val = (file_path, )
+            cursor.execute(sql, val)
 
         result = cursor.fetchall()
 
@@ -66,4 +72,4 @@ def get_file(file_name):
 
 if __name__ == "__main__":
     #delete_file("fd7ccb420b7ff266736841d6a5fec445_1624570653.pdf")
-    print(get_file("1dc140a9ce2591d3619a3fe16ce64a08_1624306443.png"))
+    print(get_file())
