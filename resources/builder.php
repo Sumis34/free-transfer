@@ -19,7 +19,7 @@ function build($page)
         <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
         <script src="https://kit.fontawesome.com/c38bf06c9c.js" crossorigin="anonymous"></script>
         <script type="text/javascript" src="/transfer/js/upload.js"></script>
-        <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+        <link rel="shortcut icon" type="image/png" href="/transfer/images/favicon.png">
         <title>Free Transfer</title>
     </head>
 

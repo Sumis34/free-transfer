@@ -8,7 +8,7 @@ if(!empty($_FILES['file'])){
 
     // File upload configuration 
     $targetDir = "./uploads/"; 
-    $allowTypes = array('pdf', 'doc', 'docx', 'jpg', 'png', 'jpeg', 'gif', 'wav', 'mp4');
+    $allowTypes = array('pdf', 'doc', 'docx', 'jpg', 'png', 'jpeg', 'gif', 'wav', 'mp4', 'zip', 'bmb', 'mp3', 'wmv', 'avi', 'psd');
 
     //file identifier
     $fileCode = bin2hex(random_bytes(16));
