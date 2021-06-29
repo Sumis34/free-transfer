@@ -47,7 +47,7 @@ $share_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" 
                     } else if (resp == 'err') {
                         $('#uploadStatus').html('<p style="color:#EA4335;">Please select a valid file to upload.</p>');
                     } else {
-                        //window.location.replace('<?php echo $share_link ?>');
+                        window.location.replace('<?php echo $share_link ?>');
                     }
                 }
             });

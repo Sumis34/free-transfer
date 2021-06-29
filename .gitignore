@@ -12,3 +12,4 @@ datenbank_connector/data
 datenbank_connector/get_all_reasons.py
 uploads/
 *.log
+workspace.code-workspace
