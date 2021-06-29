@@ -3,6 +3,8 @@ import schedule
 import time
 import logging
 
+#This path is for linux distributions
+files_path = "../uploads/"
 
 while True:
     fm.delete_expired_files()

@@ -7,6 +7,9 @@ logging.basicConfig(filename='py/logging.log', format='%(asctime)s - %(levelname
 
 def delete_expired_files(path = 'uploads/'):
 
+    files_deleted = 0
+    errors = []
+
     files = os.listdir(path)
 
     for file in files:
@@ -16,13 +19,19 @@ def delete_expired_files(path = 'uploads/'):
                 os.remove(path + file)
                 db.delete_file(file)
                 logging.info(file + " Removed")
+                files_deleted += 1
             except:
-                logging.error("Error while deleting file: " + file)
-        else:
-            logging.info("No file deleted, file not expired!")
+                errors.append("Error while deleting file: " + file)
+
+    logging.info(f"{files_deleted} file(s) where deleted.")
+    
+    for error in errors:
+        logging.error(error)      
     
 
 def cleanup_db(path = 'uploads/'):
+    dead_entries = 0
+
     files = os.listdir(path)
     db_entries = db.get_file()
 
@@ -33,10 +42,9 @@ def cleanup_db(path = 'uploads/'):
 
             if db_file_name not in files:
                 db.delete_file(db_file_name)
-                logging.info("Dead entry deleted")
-        
-            else:
-                logging.info("No dead entry found in database")
+                dead_entries += 1
+        logging.info(f"{dead_entries} dead entries where deleted.")
+
     except:
         logging.error("Error while cleaning up database!")    
 

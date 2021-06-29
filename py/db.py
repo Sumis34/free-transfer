@@ -2,7 +2,7 @@ import mysql.connector
 import json
   
 def db_start():
-    # Opening JSON file
+    # Opening JSON file '../datenbank_connector/secret.json' for linux
     data = json.load(open('datenbank_connector/secret.json'))
 
     db = mysql.connector.connect(
