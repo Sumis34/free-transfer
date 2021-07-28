@@ -8,3 +8,6 @@ RewriteRule ^.*$ index.php [PT,L]
 ErrorDocument 403 https://http.cat/403
 ErrorDocument 500 https://http.cat/500
 ErrorDocument 503 https://http.cat/503
+
+php_value upload_max_filesize 10000M
+php_value post_max_size 100000M
