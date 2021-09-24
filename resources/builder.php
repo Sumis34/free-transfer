@@ -20,6 +20,12 @@ function build($page)
         <script src="https://kit.fontawesome.com/c38bf06c9c.js" crossorigin="anonymous"></script>
         <script type="text/javascript" src="/transfer/js/upload.js"></script>
         <link rel="shortcut icon" type="image/png" href="/transfer/images/favicon.png">
+        <meta name="og:title" content="Free-Transfer"/>
+        <meta name="og:type" content="website"/>
+        <meta name="og:url" content="web.noekrebs.ch/transfer"/>
+        <meta name="og:image" content="https://tenantor.com/wp-content/uploads/data_transfer.jpg"/>
+        <meta name="og:site_name" content="Free-transfer"/>
+        <meta name="og:description" content="A platform to share your files with others."/>
         <title>Free Transfer</title>
     </head>
 

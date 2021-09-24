@@ -13,6 +13,7 @@ $(document).ready(function() {
             'image/jpg',
             'image/gif',
             'video/mp4',
+	    'video/mov',
             'text/plain',
             'application /x-compressed',
             'application/x-zip-compressed',
